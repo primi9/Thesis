@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SkinScan</string>
+    <string name="region_spinner_hint"><font fgcolor='#673AB7'>Neck</font></string>
+    <string name="age_hint"><font fgcolor='#673AB7'>20</font></string>
+    <string name="about_text">
+        <![CDATA[
+        Author: Your name<br/><br/>Your description text, changelog, licences etc... ]]>
+    </string>
+
+</resources>

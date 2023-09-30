@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/pwb"
+    tools:context=".ResultsActivity">
+
+    <TextView
+        android:id="@+id/katigiaresults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RESULTS"
+        android:textAlignment="center"
+        android:textColor="#673AB7"
+        android:textColorHighlight="#3F51B5"
+        android:textColorHint="#3F51B5"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/guideline11"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/ack_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ACK"
+        android:textColor="#673AB7"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/guideline9"
+        app:layout_constraintTop_toTopOf="@+id/guideline11"
+        app:layout_constraintBottom_toTopOf="@+id/bcc_view" />
+
+    <TextView
+        android:id="@+id/bcc_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BCC"
+        android:textColor="#673AB7"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/ack_view"
+        app:layout_constraintBottom_toTopOf = "@+id/bkl_view"
+        app:layout_constraintTop_toBottomOf="@+id/ack_view" />
+
+    <TextView
+        android:id="@+id/bkl_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MEL"
+        android:textColor="#673AB7"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/bcc_view"
+        app:layout_constraintBottom_toTopOf = "@+id/mel_view"
+        app:layout_constraintTop_toBottomOf="@+id/bcc_view" />
+
+    <TextView
+        android:id="@+id/mel_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NEV"
+        android:textColor="#673AB7"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/bkl_view"
+        app:layout_constraintBottom_toTopOf = "@+id/scc_view"
+        app:layout_constraintTop_toBottomOf="@+id/bkl_view" />
+
+    <TextView
+        android:id="@+id/scc_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SCC"
+        android:textColor="#673AB7"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/mel_view"
+        app:layout_constraintBottom_toTopOf = "@+id/sek_view"
+        app:layout_constraintTop_toBottomOf="@+id/mel_view" />
+
+    <TextView
+        android:id="@+id/sek_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="SEK"
+        android:textColor="#673AB7"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline12"
+        app:layout_constraintStart_toStartOf="@+id/scc_view"
+        app:layout_constraintTop_toBottomOf="@+id/scc_view" />
+
+    <ProgressBar
+        android:id="@+id/ack_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="96dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="20dp"
+        android:background="#00FFFFFF"
+        android:progressBackgroundTint="#0C0C0C"
+        android:progressTint="#673AB7"
+        app:layout_constraintBottom_toBottomOf="@+id/ack_view"
+        app:layout_constraintStart_toEndOf="@+id/ack_view"
+        app:layout_constraintTop_toTopOf="@+id/ack_view" />
+
+    <ProgressBar
+        android:id="@+id/bcc_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="96dp"
+        android:layout_height="24dp"
+        android:progressBackgroundTint="#000000"
+        android:progressTint="#673AB7"
+        app:layout_constraintBottom_toBottomOf="@+id/bcc_view"
+        app:layout_constraintStart_toStartOf="@+id/ack_bar"
+        app:layout_constraintTop_toTopOf="@+id/bcc_view" />
+
+    <ProgressBar
+        android:id="@+id/mel_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="96dp"
+        android:layout_height="24dp"
+        android:progressBackgroundTint="#000000"
+        android:progressTint="#673AB7"
+        app:layout_constraintBottom_toBottomOf="@+id/bkl_view"
+        app:layout_constraintStart_toStartOf="@+id/bcc_bar"
+        app:layout_constraintTop_toTopOf="@+id/bkl_view" />
+
+    <ProgressBar
+        android:id="@+id/nev_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="96dp"
+        android:layout_height="24dp"
+        android:progressBackgroundTint="#000000"
+        android:progressTint="#673AB7"
+        app:layout_constraintBottom_toBottomOf="@+id/mel_view"
+        app:layout_constraintStart_toStartOf="@+id/mel_bar"
+        app:layout_constraintTop_toTopOf="@+id/mel_view" />
+
+    <ProgressBar
+        android:id="@+id/scc_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="96dp"
+        android:layout_height="24dp"
+        android:progressBackgroundTint="#000000"
+        android:progressTint="#673AB7"
+        app:layout_constraintBottom_toBottomOf="@+id/scc_view"
+        app:layout_constraintStart_toStartOf="@+id/nev_bar"
+        app:layout_constraintTop_toTopOf="@+id/scc_view" />
+
+    <ProgressBar
+        android:id="@+id/sek_bar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="96dp"
+        android:layout_height="24dp"
+        android:progressBackgroundTint="#000000"
+        android:progressTint="#673AB7"
+        app:layout_constraintBottom_toBottomOf="@+id/sek_view"
+        app:layout_constraintStart_toStartOf="@+id/scc_bar"
+        app:layout_constraintTop_toTopOf="@+id/sek_view" />
+
+    <TextView
+        android:id="@+id/ack_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="TextView"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/ack_bar"
+        app:layout_constraintStart_toEndOf="@+id/ack_bar"
+        app:layout_constraintTop_toTopOf="@+id/ack_bar" />
+
+    <TextView
+        android:id="@+id/bcc_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/bcc_bar"
+        app:layout_constraintStart_toStartOf="@+id/ack_txt"
+        app:layout_constraintTop_toTopOf="@+id/bcc_bar" />
+
+    <TextView
+        android:id="@+id/mel_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/mel_bar"
+        app:layout_constraintStart_toStartOf="@+id/bcc_txt"
+        app:layout_constraintTop_toTopOf="@+id/mel_bar" />
+
+    <TextView
+        android:id="@+id/nev_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/nev_bar"
+        app:layout_constraintStart_toStartOf="@+id/mel_txt"
+        app:layout_constraintTop_toTopOf="@+id/nev_bar" />
+
+    <TextView
+        android:id="@+id/scc_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/scc_bar"
+        app:layout_constraintStart_toStartOf="@+id/nev_txt"
+        app:layout_constraintTop_toTopOf="@+id/scc_bar" />
+
+    <TextView
+        android:id="@+id/sek_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="@+id/sek_bar"
+        app:layout_constraintStart_toStartOf="@+id/scc_txt"
+        app:layout_constraintTop_toTopOf="@+id/sek_bar" />
+
+    <Button
+        android:id="@+id/ok_button_results"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:onClick='ok_button_pressed'
+        android:text="OK"
+        app:layout_constraintTop_toTopOf="@+id/guideline12"
+        app:layout_constraintEnd_toStartOf="@+id/guideline10"
+         />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
